@@ -27,6 +27,19 @@ router.route('/post')
         }
     );
 
+router.route('/get')
+    .get(authController.isAuthenticated, function (req, res) {
+            console.log(req.body);
+            res = res.status(200);
+            if (req.get('Content-Type')) {
+                console.log("Content-Type: " + req.get('Content-Type'));
+                res = res.type(req.get('Content-Type'));
+            }
+            res.send("Empty data");
+        }
+    );
+
+
 router.route('/postjwt')
     .post(authJwtController.isAuthenticated, function (req, res) {
             console.log(req.body);
