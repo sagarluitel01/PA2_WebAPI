@@ -423,21 +423,15 @@
 					]
 				},
 				"method": "GET",
-				"header": [
-					{
-						"key": "",
-						"value": ""
-					}
-				],
+				"header": [],
 				"body": {},
 				"url": {
-					"raw": "https://echohw2.herokuapp.com/get",
-					"protocol": "https",
+					"raw": "http://localhost:8080/get",
+					"protocol": "http",
 					"host": [
-						"echohw2",
-						"herokuapp",
-						"com"
+						"localhost"
 					],
+					"port": "8080",
 					"path": [
 						"get"
 					]
@@ -734,6 +728,64 @@
 					"port": "8080",
 					"path": [
 						"get"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "heroku/delete",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1b41b056-5f0e-4c5d-855a-f01212c9350e",
+						"type": "text/javascript",
+						"exec": [
+							"var jData = JSON.parse(responseBody);",
+							"tests[\"name\"] = jData.name == \"sagar\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "testuser",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "cu",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"sagar\"\n}"
+				},
+				"url": {
+					"raw": "https://echohw2.herokuapp.com/delete",
+					"protocol": "https",
+					"host": [
+						"echohw2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"delete"
 					]
 				},
 				"description": ""
