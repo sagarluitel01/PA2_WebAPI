@@ -17,25 +17,45 @@ var router = express.Router();
 
 router.route('/post')
     .post(function (req, res) {
+
+        var body = req.body;
+        var head = req.headers;
+
+        if (Object.keys(req.headers).length === 0) {
+            head = "No header sent";
+        }
+        if (Object.keys(req.body).length === 0) {
+            body = "No Body sent";
+        }
             console.log(req.body);
             res = res.status(200);
             if (req.get('Content-Type')) {
                 console.log("Content-Type: " + req.get('Content-Type'));
                 res = res.type(req.get('Content-Type'));
             }
-            res.send(req.body);
+        res.json({Body: body, Headers: head, KEY: process.env.SECRET_KEY});
         }
     );
 
 router.route('/get')
     .get(function (req, res) {
+
+        var body = req.body;
+        var head = req.headers;
+
+        if (Object.keys(req.headers).length === 0) {
+            head = "No header sent";
+        }
+        if (Object.keys(req.body).length === 0) {
+            body = "No Body sent";
+        }
             console.log(req.body);
             res = res.status(200);
             if (req.get('Content-Type')) {
                 console.log("Content-Type: " + req.get('Content-Type'));
                 res = res.type(req.get('Content-Type'));
             }
-            res.send("Empty data");
+        res.json({Body: body, Headers: head, KEY: process.env.SECRET_KEY});
         }
     );
 
