@@ -22,10 +22,10 @@ router.route('/post')
         var head = req.headers;
 
         if (Object.keys(req.headers).length === 0) {
-            head = "No header sent";
+            head = "Header was empty";
         }
         if (Object.keys(req.body).length === 0) {
-            body = "No Body sent";
+            body = "Body was empty";
         }
             console.log(req.body);
             res = res.status(200);
@@ -44,10 +44,10 @@ router.route('/get')
         var head = req.headers;
 
         if (Object.keys(req.headers).length === 0) {
-            head = "No header sent";
+            head = "Header was empty";
         }
         if (Object.keys(req.body).length === 0) {
-            body = "No Body sent";
+            body = "Body was empty";
         }
             console.log(req.body);
             res = res.status(200);
