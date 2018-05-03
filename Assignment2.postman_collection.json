@@ -1,0 +1,371 @@
+{
+	"info": {
+		"_postman_id": "a5fc1908-3e81-49b9-bdec-a1fd1dd99c80",
+		"name": "Assignment2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "singUp",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "sagar",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "sagar",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "ucd",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://echohw2.herokuapp.com/signup",
+					"protocol": "https",
+					"host": [
+						"echohw2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "singIn",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "sagar",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "ucd",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://echohw2.herokuapp.com/signin",
+					"protocol": "https",
+					"host": [
+						"echohw2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostJWT",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjRiZmQxOTMzNGIyNjU0MTA5NWU4ODI3MjVmZGFkYjU4YmI4M2QyN2IiLCJ1c2VybmFtZSI6InNhZ2FyIiwiaWF0IjoxNTI1MjkyNTUwfQ.Bbt0YuD9HQLjN1Se5fevG36V2kyaqfBvxg7oJVfb5G8"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"echo\": \"test\"\n}"
+				},
+				"url": {
+					"raw": "https://echohw2.herokuapp.com/postjw",
+					"protocol": "https",
+					"host": [
+						"echohw2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"postjw"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "testuser",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "cu",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\t\n\t\"name\": \"sagar\"\n}"
+				},
+				"url": {
+					"raw": "https://echohw2.herokuapp.com/delete",
+					"protocol": "https",
+					"host": [
+						"echohw2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://echohw2.herokuapp.com/get",
+					"protocol": "https",
+					"host": [
+						"echohw2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "testuser",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "cu",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"echo\": \"test\"\n}"
+				},
+				"url": {
+					"raw": "https://echohw2.herokuapp.com/put",
+					"protocol": "https",
+					"host": [
+						"echohw2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"put"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://echohw2.herokuapp.com/post",
+					"protocol": "https",
+					"host": [
+						"echohw2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fail get/put",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "testuser",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "cu",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"disabled": true
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://echohw2.herokuapp.com/put",
+					"protocol": "https",
+					"host": [
+						"echohw2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"put"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fail Post /get",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://echohw2.herokuapp.com/get",
+					"protocol": "https",
+					"host": [
+						"echohw2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Worng Basic Auth",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "cud",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "testuser",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": ""
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://echohw2.herokuapp.com/postjwt",
+					"protocol": "https",
+					"host": [
+						"echohw2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"postjwt"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
